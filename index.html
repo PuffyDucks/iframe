@@ -4,9 +4,6 @@
   <title>IFrame</title>
   <!--NOTE TO SELF - ADD SIZE CHANGING FEATURE-->
   <style>
-    iframe {
-      height: 100%;
-    }
 
     input[type=text] {
       height: 20%;
@@ -66,10 +63,15 @@
         font-size: 12px;
     }
     body {
+      /*margin: 0;*/
       background-color: #7CDBD5;
     }
+    iframe {
+      height: 95vh;
+      width: 99%;
+    }
     #browser {
-      height:80%;
+      /*height:80%;*/
     }
   </style>
   <link rel="stylesheet" type="text/css" href="button-style.css" title="button-style" />
@@ -164,8 +166,8 @@
     <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/> -->
     </form>
   </div>
-  <div>
-    <iframe id="browser" name="browser" src="IFrame-info.html" style="height: 575px; width:100%; background-color: #fff; border: none; frameborder="0""></iframe> <br/>
+  <div class="iframe1">
+    <iframe id="browser" name="browser" src="IFrame-info.html" style="background-color: #fff; border: none; frameborder="0""></iframe> <br/>
   </div>
   <div align="center">
     <button class="button button1" onclick="setBrowserFrameSourceToBing()">Bing</button>
