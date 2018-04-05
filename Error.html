@@ -4,7 +4,7 @@
   <title>hi</title>
   <style>
     body {
-      background-color: #F9BE02;
+      background-color: #FFB0ff;
     }
     .left {
       text-align: justify;
@@ -22,8 +22,18 @@
   <meta name="keywords" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function onload() {
+      document.body.style.background = "#FFB0ff";
+      if (localStorage.color === "orange") {
+        document.body.style.background = "#F9BE02";
+      } else {
+        document.body.style.background = "#FFB0ff";
+      }
+    }
+  </script>
 </head>
-<body>
+<body onload="onload();">
   <div class = "left">
     <a style="font-size: 20px;">Oops. You don't have unsafe scripts loading! (Don't worry, it's not actually unsafe.) Just click the sheild up there, press load, and try again.</a>
   </div>

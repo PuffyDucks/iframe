@@ -16,6 +16,11 @@
       outline: none;
     }
 
+    ::placeholder {
+      color: #086CB8;
+      opacity: 1;
+    }
+
     input[type=text]:focus {
 
     }
@@ -82,7 +87,7 @@
     }
 
     body {
-      margin: 0;
+      margin: 0.5vw;
       background-color: #72a8ff;
     }
     iframe {
@@ -136,7 +141,7 @@
 
     function setBrowserFrameSourceToBookmark3(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src = "http://repeatyt.com";
+      browserFrame.src = "https://ytmp3.cc";
     }
 
     function setBrowserFrameSourceToBookmark4(){
@@ -161,12 +166,12 @@
     }
     function toggleFullscreen() {
       var browserFrame = document.getElementById("browser");
-      if (browserFrame.style.height === "100vh") {
+      if (browserFrame.style.height === "97vh") {
         browserFrame.style.height = "82vh";
-        browserFrame.style.width = "99vw";
+        browserFrame.style.width = "99%";
         browserFrame.style.margin = "7px";
       } else {
-        browserFrame.style.height = "100vh";
+        browserFrame.style.height = "97vh";
         browserFrame.style.width = "100vw";
         browserFrame.style.margin = "0px";
       }
@@ -235,7 +240,7 @@
   <div id="bookmarks" align="center">
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark1()">Bing</button>
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark2()">Minesweeper</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark3()">RepeatYT</button>
+    <button class="button button1" onclick="setBrowserFrameSourceToBookmark3()">YouTube Download</button>
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark4()">Mango</button>
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark5()">Amazing Stuff</button>
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark6()">Info</button>
