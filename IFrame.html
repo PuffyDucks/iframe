@@ -42,7 +42,7 @@
 
     .button1 {
       background-color: #F53240;
-      width: 15%;
+      width: 15vw;
       padding: 15px 32px;
       font-size: 12px;
     }
@@ -56,7 +56,7 @@
 
     .button2 {
       background-color: #02C887;
-      width: 19%;
+      width: 19vw;
       padding: 3px 32px;
       font-size: 12px;
     }
@@ -70,7 +70,7 @@
 
     .button3 {
       background-color: #8c8cff;
-      width: 15%;
+      width: 15vw;
       padding: 10px 32px;
       font-size: 12px;
     }
@@ -221,20 +221,22 @@
     <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
     <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
     <a href="">Press me if you have no idea how to use this.</a> -->
-    <input style="width:3%; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="<-" onclick="goBack(); return false;"/>
-    <input style="width:3%; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="->" onclick="goForward(); return false;"/>
+    <input style="width:3vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="<-" onclick="goBack(); return false;"/>
+    <input style="width:3vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="->" onclick="goForward(); return false;"/>
     <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text" onkeypress="setBrowserFrameSourceCheck(event)"/>
     <!-- Text Color #FF0099 -->
-    <input style="width:15%; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
+    <input style="width:15vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
     <!-- Do later: change website according to IFrame -->
     <!-- <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
     <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/> -->
-    <input style="width:10%; background-color: #8c8cff; border: solid 1px #7777ff;" type="button" value="Fullscreen" onclick="toggleFullscreen()"; return false;/>
+    <input style="width:10vw; background-color: #8c8cff; border: solid 1px #7777ff;" type="button" value="Fullscreen" onclick="toggleFullscreen()"; return false;/>
 
     </form>
   </div>
 
-  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" style="background-color: #fff; border: 0; margin: 7px" scrolling="auto" noresize></iframe> <br/>
+  <div align="center">
+  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" style="background-color: #fff; border: 0;" scrolling="auto" noresize></iframe> <br/>
+  </div>
 
   <div id="bookmarks" align="center">
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark1()">Bing</button>
