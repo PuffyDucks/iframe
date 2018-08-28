@@ -11,7 +11,7 @@
       background-color: #FFA62E;
       border: solid 1px #ff9200;
       color: #086CB8;
-      margin: 5px 3px;
+      margin: 1vh 3px;
       padding: 4px 10px;
       outline: none;
     }
@@ -91,11 +91,11 @@
 
     body {
       background-color: #72a8ff;
-      margin: 1vw;
+      margin: 0vw;
     }
     iframe {
-      height: 78vh;
-      width: 99%;
+      height: 95vh;
+      width: 100vw;
     }
     #browser {
       /*height:80%;*/
@@ -108,13 +108,12 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript">
+
     function onload() {
-      var fullScreenOffButton = document.getElementById("fullscreen");
-      fullScreenOffButton.style.display = "none";
+        var bookmarkButtons = document.getElementById("bookmarks");
+        bookmarkButtons.style.display = "none";
     }
-    // while (true) {
-    //   console.log("hi");
-    // }
+
     function setBrowserFrameSourceCheck(key){
         if(key.keyCode === 13){
             key.preventDefault();
@@ -129,29 +128,23 @@
         browserFrame.src = "blank.html";
       }
     }
+
     function setBrowserFrameSourceToBookmark1(){
       var browserFrame = document.getElementById("browser");
       browserFrame.src = "https://www.bing.com";
     }
-
     function setBrowserFrameSourceToBookmark2(){
       var browserFrame = document.getElementById("browser");
       browserFrame.src = "http://birrell.org/andrew/minesweeper/";
-      // if (browserFrame.src !== "https://ultimate-p2.weebly.com";) {
-      //   browserFrame.src = "https://puffyducks.github.io/Error.html";
-      // }
     }
-
     function setBrowserFrameSourceToBookmark3(){
       var browserFrame = document.getElementById("browser");
       browserFrame.src = "https://ytmp3.cc";
     }
-
     function setBrowserFrameSourceToBookmark4(){
       var browserFrame = document.getElementById("browser");
       browserFrame.src = "http://www.republiquedesmangues.fr/";
     }
-
     function setBrowserFrameSourceToBookmark5(){
       var browserFrame = document.getElementById("browser");
       browserFrame.src = "https://player.vimeo.com/video/45196609?autoplay=1";
@@ -169,17 +162,6 @@
     }
     function toggleFullscreen() {
       var browserFrame = document.getElementById("browser");
-      if (browserFrame.style.height === "96.5vh") {
-        browserFrame.style.height = "78vh";
-        browserFrame.style.width = "99%";
-        // browserFrame.style.margin = "1vw";
-        document.body.style.margin = "1vw";
-      } else {
-        browserFrame.style.height = "96.5vh";
-        browserFrame.style.width = "100vw";
-        browserFrame.style.margin = "0vw";
-        document.body.style.margin = "0vw";
-      }
 
       var bookmarkButtons = document.getElementById("bookmarks");
       if (bookmarkButtons.style.display === "none") {
@@ -188,60 +170,21 @@
           bookmarkButtons.style.display = "none";
       }
 
-      var browserButtons = document.getElementById("browserElements");
-      if (browserButtons.style.display === "none") {
-          browserButtons.style.display = "block";
-      } else {
-          browserButtons.style.display = "none";
-      }
+    }
 
-      var fullScreenOffButton = document.getElementById("fullscreen");
-      if (fullScreenOffButton.style.display === "none") {
-        fullScreenOffButton.style.display = "block";
-      } else {
-        fullScreenOffButton.style.display = "none";
-      }
-    }
-    /**function setBrowserSizeSmaller() {
-      var browserHeight = document.getElementById("browser").style.height;
-      height=height.replace("px","");
-      height=+height;
-      var n=height;
-      height=n+300+'px';
-      document.getElementById('browser').style.height = height;
-    }
-    function setBrowserSizeBigger() {
-      var browserFrame = document.getElementById("browser").style.height;
-      height=height.replace("px","");
-      height=+height;
-      var n=height;
-      height=n+300+'px';
-      document.getElementById('browser').style.height = height;
-    }**/
   </script>
 </head>
 <body onload="onload();">
   <div id="browserElements" align="center">
     <form method="post" target="browser">
-    <!-- <a href="javascript:var username = prompt(&quot;Paste Username&quot;);">Press me to paste username.</a>
-    <a href="javascript:var playlist = prompt(&quot;Paste Playlist&quot;);">Press me to paste playlist.</a>
-    <a href="javascript:var link = prompt(&quot;Copy this&quot;,&quot;https:/&quot;+&quot;/open.spotify.com/embed?uri=spotify:user:&quot;+username+&quot;:playlist:&quot;+playlist);">Press me to generate link.</a>
-    <a href="">Press me if you have no idea how to use this.</a> -->
     <input style="width:3vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="<-" onclick="goBack(); return false;"/>
     <input style="width:3vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="->" onclick="goForward(); return false;"/>
     <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text" onkeypress="setBrowserFrameSourceCheck(event)"/>
     <!-- Text Color #FF0099 -->
     <input style="width:15vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
-    <!-- Do later: change website according to IFrame -->
-    <!-- <input style="width:3%; background-color: #02C887;" type="button" value="-" onclick="setBrowserSizeSmaller(); return false;"/>
-    <input style="width:3%; background-color: #02C887;" type="button" value="+" onclick="setBrowserSizeBigger(); return false;"/> -->
-    <input style="width:10vw; background-color: #8c8cff; border: solid 1px #7777ff;" type="button" value="Fullscreen" onclick="toggleFullscreen()"; return false;/>
+    <input style="width:10vw; background-color: #8c8cff; border: solid 1px #7777ff;" type="button" value="Bookmarks" onclick="toggleFullscreen()"; return false;/>
 
     </form>
-  </div>
-
-  <div align="center">
-  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" style="background-color: #fff; border: 0;" scrolling="auto" noresize></iframe> <br/>
   </div>
 
   <div id="bookmarks" align="center">
@@ -253,8 +196,8 @@
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark6()">Info</button>
   </div>
 
-  <div class="fullscreenButton" id="fullscreen" align="center">
-    <button class="button button3" onclick="toggleFullscreen()">Fullscreen Off</button>
+  <div align="center">
+  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" style="background-color: #fff; border: 0;" scrolling="auto" noresize></iframe> <br/>
   </div>
 </body>
 </html>
