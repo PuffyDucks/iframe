@@ -9,7 +9,7 @@
       height: 1.5vh;
       width:60vw;
       background-color: #FFA62E;
-      border: solid 1px #ff9200;
+      border: solid 0px #ff9200;
       color: #086CB8;
       margin: 1vh 3px;
       padding: 4px 10px;
@@ -43,44 +43,29 @@
 
     .button1 {
       background-color: #F53240;
-      width: 15vw;
-      height: 7vh;
-      padding: 15px 32px;
+      width: 13.5vw;
+      height: 3vh;
+      padding: 1px 20px;
       font-size: 11px;
     }
 
     .button1:hover {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
         background-color: #F53240;
-        padding: 15px 32px;
+        padding: 1px 20px;
         font-size: 12px;
     }
 
     .button2 {
-      background-color: #02C887;
-      width: 19vw;
-      padding: 3px 32px;
-      font-size: 12px;
     }
 
     .button2:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        background-color: #02C887;
-        padding: 3px 32px;
-        font-size: 12px;
     }
 
     .button3 {
-      background-color: #8c8cff;
-      height: 3.5vh;
-      width: 100vw;
-      padding: 0px 0px;
-      font-size: 12px;
-      margin: 0;
     }
 
     .button3:hover {
-      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     }
 
     .fullscreenButton {
@@ -170,6 +155,12 @@
           bookmarkButtons.style.display = "none";
       }
 
+      var browserElements = document.getElementById("browserElements");
+      if (browserElements.style.display === "none") {
+          browserElements.style.display = "block";
+      } else {
+          browserElements.style.display = "none";
+      }
     }
 
   </script>
@@ -177,13 +168,12 @@
 <body onload="onload();">
   <div id="browserElements" align="center">
     <form method="post" target="browser">
-    <input style="width:3vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="<-" onclick="goBack(); return false;"/>
-    <input style="width:3vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="->" onclick="goForward(); return false;"/>
+    <input style="width:3vw; background-color: #00D10E; border: solid 0px #00a80b;" type="button" value="<-" onclick="goBack(); return false;"/>
+    <input style="width:3vw; background-color: #00D10E; border: solid 0px #00a80b;" type="button" value="->" onclick="goForward(); return false;"/>
     <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text" onkeypress="setBrowserFrameSourceCheck(event)"/>
     <!-- Text Color #FF0099 -->
-    <input style="width:15vw; background-color: #00D10E; border: solid 1px #00a80b;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
-    <input style="width:10vw; background-color: #8c8cff; border: solid 1px #7777ff;" type="button" value="Bookmarks" onclick="toggleFullscreen()"; return false;/>
-
+    <input style="width:15vw; background-color: #00D10E; border: solid 0px #00a80b;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
+    <input style="width:10vw; background-color: #8c8cff; border: solid 0px #7777ff;" type="button" value="Bookmarks" onclick="toggleFullscreen()"; return false;/>
     </form>
   </div>
 
@@ -194,6 +184,7 @@
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark4()">Mango</button>
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark5()">Amazing Stuff</button>
     <button class="button button1" onclick="setBrowserFrameSourceToBookmark6()">Info</button>
+    <input style="width:10vw; background-color: #8c8cff; border: solid 0px #7777ff;" type="button" value="Bookmarks" onclick="toggleFullscreen()"; return false;/>
   </div>
 
   <div align="center">
