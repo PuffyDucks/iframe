@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>hi</title>
-  <style>
-    body {
-      background-color: #FFB0ff;
-    }
-  </style>
+  <title>egg</title>
+  <link rel="stylesheet" type="text/css" href="style.css" title="style"/>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="keywords" content="">

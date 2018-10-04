@@ -1,0 +1,96 @@
+body {
+  background-color: #FADDAF;
+  margin: 0vw;
+}
+
+h1, h2, h3 {
+  color: #472C25;
+  margin:2vw;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FDF3B5;
+  align: center;
+  display:table;
+  margin:0 auto;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: #F7EFD4;
+  text-align: center;
+  padding: 0.6vh 2vw;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #7c2f17;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+input[type=text] {
+  width:60vw;
+  background-color: #CC5543;
+  border: 0;
+  color: #EDB579;
+  padding: 0.9vh 1vw;
+  outline: none;
+}
+
+::placeholder {
+  color: #EDB579;
+  opacity: 1;
+}
+
+input[type=text]:focus {
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F7EFD4;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #472C25;
+  padding: 0.6vh 2vw;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+a.arrow {
+  background-color: #91371B;
+}
+
+a#bookmarks {
+  background-color: #EB712F;
+}
+
+.dropdown-content a:hover {
+  background-color: #F3E7BF;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+iframe {
+  height: 96vh;
+  width: 100vw;
+  background-color: #fff;
+}

@@ -2,200 +2,34 @@
 <html lang="en">
 <head>
   <title>IFrame</title>
-  <!--NOTE TO SELF - ADD SIZE CHANGING FEATURE-->
-  <style>
-
-    input[type=text] {
-      height: 1.5vh;
-      width:60vw;
-      background-color: #FFA62E;
-      border: solid 0px #ff9200;
-      color: #086CB8;
-      margin: 1vh 3px;
-      padding: 4px 10px;
-      outline: none;
-    }
-
-    ::placeholder {
-      color: #086CB8;
-      opacity: 1;
-    }
-
-    input[type=text]:focus {
-
-    }
-
-    .div1 {
-      text-align: center;
-    }
-
-    .button {
-      border: none;
-      height: 1.5vh;
-      color: black;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-
-    .button1 {
-      background-color: #F53240;
-      width: 15vw;
-      height: 3vh;
-      padding: 1px 20px;
-      font-size: 11px;
-    }
-
-    .button1:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        background-color: #F53240;
-        padding: 1px 20px;
-        font-size: 12px;
-    }
-
-    .button2 {
-    }
-
-    .button2:hover {
-    }
-
-    .button3 {
-    }
-
-    .button3:hover {
-    }
-
-    .fullscreenButton {
-      display: "none";
-      margin-top: -1vh;
-      padding: 0px;
-    }
-
-    body {
-      background-color: #72a8ff;
-      margin: 0vw;
-    }
-    iframe {
-      height: 95vh;
-      width: 100vw;
-    }
-    #browser {
-      /*height:80%;*/
-    }
-  </style>
-  <link rel="stylesheet" type="text/css" href="button-style.css" title="button-style" />
+  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript">
-
-    function onload() {
-        var bookmarkButtons = document.getElementById("bookmarks");
-        bookmarkButtons.style.display = "none";
-    }
-
-    function setBrowserFrameSourceCheck(key){
-        if(key.keyCode === 13){
-            key.preventDefault();
-
-            setBrowserFrameSource();
-        }
-    }
-    function setBrowserFrameSource(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = document.getElementById("txtUrl").value;
-      if (document.getElementById("txtUrl").value === "") {
-        browserFrame.src = "blank.html";
-      }
-    }
-
-    function setBrowserFrameSourceToBookmark1(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = "https://www.bing.com";
-    }
-    function setBrowserFrameSourceToBookmark2(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = "http://birrell.org/andrew/minesweeper/";
-    }
-    function setBrowserFrameSourceToBookmark3(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = "https://ytmp3.cc";
-    }
-    function setBrowserFrameSourceToBookmark4(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = "http://www.republiquedesmangues.fr/";
-    }
-    function setBrowserFrameSourceToBookmark5(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = "https://www.nationalgeographic.com/projects/magazines/pdf/specialprojects-yourshot-puzzle/dist/jigsaw-puzzle.html#";
-    }
-    function setBrowserFrameSourceToBookmark6(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src = "IFrame-info.html";
-    }
-
-    function goBack() {
-      window.history.back();
-    }
-    function goForward() {
-      window.history.forward();
-    }
-    function toggleFullscreen() {
-      var browserFrame = document.getElementById("browser");
-
-      var bookmarkButtons = document.getElementById("bookmarks");
-      if (bookmarkButtons.style.display === "none") {
-          bookmarkButtons.style.display = "block";
-      } else {
-          bookmarkButtons.style.display = "none";
-      }
-
-      var browserFrame = document.getElementById("browser");
-      if (browserFrame.style.height === "91vh") {
-        browserFrame.style.height = "95vh";
-      } else {
-        browserFrame.style.height = "91vh";
-      }
-
-      // var browserElements = document.getElementById("browserElements");
-      // if (browserElements.style.display === "none") {
-      //     browserElements.style.display = "block";
-      // } else {
-      //     browserElements.style.display = "none";
-      // }
-    }
-
-  </script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 <body onload="onload();">
-  <div id="browserElements" align="center">
-    <form method="post" target="browser">
-    <input style="width:3vw; background-color: #00D10E; border: solid 0px #00a80b;" type="button" value="<-" onclick="goBack(); return false;"/>
-    <input style="width:3vw; background-color: #00D10E; border: solid 0px #00a80b;" type="button" value="->" onclick="goForward(); return false;"/>
-    <input id="txtUrl" style="" placeholder="Put the link here" name="url" type="text" onkeypress="setBrowserFrameSourceCheck(event)"/>
-    <!-- Text Color #FF0099 -->
-    <input style="width:15vw; background-color: #00D10E; border: solid 0px #00a80b;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;"/>
-    <input style="width:10vw; background-color: #8c8cff; border: solid 0px #7777ff;" type="button" value="Bookmarks" onclick="toggleFullscreen()"; return false;/>
-    </form>
-  </div>
-
-  <div id="bookmarks" align="center">
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark1()">Bing</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark2()">Minesweeper</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark3()">YouTube Download</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark4()">Mango</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark5()">Jigsaw</button>
-    <button class="button button1" onclick="setBrowserFrameSourceToBookmark6()">Info</button>
-    <!-- <input style="width:10vw; background-color: #8c8cff; border: solid 0px #7777ff;" type="button" value="Bookmarks" onclick="toggleFullscreen()"; return false;/> -->
-  </div>
-
+  <ul>
+    <li><a class="arrow" onclick="goBack();"><</a></li>
+    <li><a class="arrow" onclick="goForward();">></a></li>
+    <li><input id="txtUrl" placeholder="Put the link here" name="url" type="text" onkeypress="setBrowserFrameSourceCheck(event)"/></li>
+    <li><a class="arrow" onclick="setBrowserFrameSource();">Go</a></li>
+    <li class="dropdown">
+      <a id="bookmarks" href="javascript:void(0)" class="dropbtn">Bookmarks</a>
+      <div class="dropdown-content">
+        <a onclick="setBrowserFrameSourceToBookmark1()">Bing</a>
+        <a onclick="setBrowserFrameSourceToBookmark2()">Minesweeper</a>
+        <a onclick="setBrowserFrameSourceToBookmark3()">Youtube Download</a>
+        <a onclick="setBrowserFrameSourceToBookmark4()">Coreball</a>
+        <a onclick="setBrowserFrameSourceToBookmark5()">Jigsaw</a>
+        <a onclick="setBrowserFrameSourceToBookmark6()">Info</a>
+      </div>
+    </li>
+  </ul>
   <div align="center">
-  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" style="background-color: #fff; border: 0;" scrolling="auto" noresize></iframe> <br/>
+  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" scrolling="auto" noresize></iframe> <br/>
   </div>
 </body>
 </html>
