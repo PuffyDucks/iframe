@@ -1,15 +1,15 @@
 body {
-  background-color: #000000;
+  background-color: #FADDAF;
   margin: 0vw;
 }
 
 a.arrow {
-  background-color: #530F6B;
+  background-color: #91371B;
 }
 
 li a, .dropbtn {
   display: inline-block;
-  color: #E5F056;
+  color: #F7EFD4;
   text-align: center;
   padding: 0.6vh 2vw;
   text-decoration: none;
@@ -18,7 +18,7 @@ li a, .dropbtn {
 
 input[type=text], ::placeholder {
   width:60vw;
-  background-color: #671385;
+  background-color: #CC5543;
   border: 0;
   color: #EDB579;
   padding: 0.9vh 1vw;
@@ -26,31 +26,30 @@ input[type=text], ::placeholder {
 }
 
 a#bookmarks {
-  background-color: #CBD636;
-  color: #5C5315;
-  cursor: default;
+  background-color: #EB712F;
+  color: #F7EFD4;
 }
 
 h1, h2, h3 {
-  color: #F6921D;
+  color: #472C25;
   margin:2vw;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #530F6B;
+  background-color: #F7EFD4;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: #420C55;
+  background-color: #7c2f17;
 }
 
 .dropdown-content a {
-  color: #F9B96F;
+  color: #472C25;
   padding: 0.6vh 2vw;
   text-decoration: none;
   display: block;
@@ -70,8 +69,8 @@ li {
   float: left;
 }
 
-li.dropdown {
-  display: inline-block;
+.dropdown-content a:hover {
+  background-color: #F3E7BF;
 }
 
 .dropdown:hover .dropdown-content {

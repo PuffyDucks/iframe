@@ -44,10 +44,20 @@ function setBrowserFrameSourceToBookmark5(){
 
 function setBrowserFrameSourceToBookmark6(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://camo.envatousercontent.com/7a70e8ab0bbf84901741e9aa6fead4d671b8cd03/687474703a2f2f6933352e70686f746f6275636b65742e636f6d2f616c62756d732f643138332f4641444544474c4f52593138322f6f75747075745f4f395a59746a5f7a70736f6d30706c6370722e676966";
+  browserFrame.src = "https://skribbl.io/";
 }
 
 function setBrowserFrameSourceToBookmark7(){
+  var browserFrame = document.getElementById("browser");
+  browserFrame.src = "https://theuselessweb.site/Flight%20of%20the%20Hamsters/";
+}
+
+function setBrowserFrameSourceToBookmark8(){
+  var browserFrame = document.getElementById("browser");
+  browserFrame.src = "https://play.cprewritten.net";
+}
+
+function setBrowserFrameSourceToBookmark9(){
   var browserFrame = document.getElementById("browser");
   browserFrame.src = "IFrame-info.html";
 }
