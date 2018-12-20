@@ -1,5 +1,12 @@
 function onload() {
-
+  var browserFrame = document.getElementById("browser");
+  if (location.hash === "") {
+    browserFrame.src = "IFrame-info.html";
+  } else {
+    var url = location.hash;
+    url = url.substr(1);
+    browserFrame.src = url;
+  }
 }
 
 function setBrowserFrameSourceCheck(key){

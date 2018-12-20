@@ -31,7 +31,13 @@
     </li>
   </ul>
   <div align="center">
-  <iframe id="browser" name="browser" src="IFrame-info.html" frameBorder="0" scrolling="auto" noresize></iframe> <br/>
+  <iframe id="browser" name="browser" loadeddata="load();" frameBorder="0" scrolling="auto" noresize></iframe> <br/>
+  <script type="text/javascript">
+  document.getElementById("browser").onload = function() {
+    var browserFrame = document.getElementById("browser");
+    location.hash = browserFrame.src;
+  }
+  </script>
   </div>
 </body>
 </html>
