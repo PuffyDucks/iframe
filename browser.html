@@ -12,20 +12,19 @@
 </head>
 <body onload="onload();">
   <ul>
-    <li><a class="arrow" onclick="goBack();"><</a></li>
-    <li><a class="arrow" onclick="goForward();">></a></li>
     <li><input id="txtUrl" placeholder="Put the link here" name="url" type="text" onkeypress="setBrowserFrameSourceCheck(event)" autocomplete="off"/></li>
-    <li><a class="arrow" onclick="setBrowserFrameSource();">Go</a></li>
+    <li><a class="go" onclick="setBrowserFrameSource();">Go</a></li>
     <li class="dropdown">
       <a id="bookmarks" href="javascript:void(0)" class="dropbtn">Bookmarks</a>
       <div class="dropdown-content">
-        <a onclick="setBrowserFrameSourceToBookmark1()">Snow</a>
+        <a onclick="setBrowserFrameSourceToBookmark1()">Bing</a>
         <a onclick="setBrowserFrameSourceToBookmark2()">Minesweeper</a>
         <a onclick="setBrowserFrameSourceToBookmark3()">Youtube Download</a>
         <a onclick="setBrowserFrameSourceToBookmark4()">Coreball</a>
         <a onclick="setBrowserFrameSourceToBookmark5()">Jigsaw</a>
         <a onclick="setBrowserFrameSourceToBookmark6()">Skribbl.io</a>
         <a onclick="setBrowserFrameSourceToBookmark7()">Flight of the Hamsters</a>
+        <a onclick="setBrowserFrameSourceToBookmark8()">Club Penguin</a>
         <a onclick="setBrowserFrameSourceToBookmark9()">Info</a>
       </div>
     </li>
