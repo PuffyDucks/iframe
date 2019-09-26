@@ -1,5 +1,7 @@
+// On load, checks hash for url to load
 function onload() {
   var browserFrame = document.getElementById("browser");
+  // Loads info page by default
   if (location.hash === "") {
     browserFrame.src = "IFrame-info.html";
   } else {
@@ -9,6 +11,7 @@ function onload() {
   }
 }
 
+// Checks if enter key is pressed on text field
 function setBrowserFrameSourceCheck(key){
   if(key.keyCode === 13){
     key.preventDefault();
@@ -22,6 +25,7 @@ function setBrowserFrameSourceCheck(key){
   }
 }
 
+// Changes source of IFrame
 function setBrowserFrameSource(){
   var browserFrame = document.getElementById("browser");
   browserFrame.src = document.getElementById("txtUrl").value;
@@ -30,6 +34,7 @@ function setBrowserFrameSource(){
   }
 }
 
+// Makes bookmarks direct to specific sites
 function setBrowserFrameSourceToBookmark1(){
   var browserFrame = document.getElementById("browser");
   browserFrame.src = "https://www.bing.com//";
@@ -75,6 +80,7 @@ function setBrowserFrameSourceToBookmark9(){
   browserFrame.src = "IFrame-info.html";
 }
 
+// Back and forth buttons change history
 function goBack() {
   window.history.back();
 }
