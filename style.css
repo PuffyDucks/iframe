@@ -1,15 +1,25 @@
 body {
-  background-color: #a0ccff;
+  background-color: #383838;
   margin: 0vw;
 }
 
-a.go {
-  background-color: #38A466;
+h1, h2, h3 {
+  color: #b1b6bd;
+  margin:2vw;
+  font-family: "Roboto";
+}
+
+a#go {
+  background-color: #18191c;
+}
+
+a#go:hover, a#bookmarks:hover {
+  background-color: #27292e;
 }
 
 li a, .dropbtn {
   display: inline-block;
-  color: #cef2f2;
+  color: #b1b6bd;
   text-align: center;
   padding: 0.6vh 2vw;
   text-decoration: none;
@@ -18,38 +28,39 @@ li a, .dropbtn {
 
 input[type=text], ::placeholder {
   width:70vw;
-  background-color: #23568f;
+  background-color: #18191c;
   border: 0;
-  color: #f8e4ff;
+  color: #b1b6bd;
   padding: 0.9vh 1vw;
   outline: none;
 }
 
 a#bookmarks {
-  background-color: #56acba;
-  color: #fffadc;
+  background-color: #18191c;
+  color: #b1b6bd;
 }
 
-h1, h2, h3 {
-  color: #0d193b;
-  margin:2vw;
+@font-face {
+  font-family: "Roboto";
+  src: url(Roboto-Regular.ttf) format("truetype");
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #95C3CD;
+  background-color: #202225;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: #56B780;
+  background-color: #31353b;
+  border-radius: 20px;
 }
 
 .dropdown-content a {
-  color: #fffadc;
+  color: #b1b6bd;
   padding: 0.6vh 2vw;
   text-decoration: none;
   display: block;
@@ -70,7 +81,7 @@ li {
 }
 
 .dropdown-content a:hover {
-  background-color: #80b4bf;
+  background-color: #31353b;
 }
 
 .dropdown:hover .dropdown-content {
@@ -81,8 +92,19 @@ li {
   padding: 0;
 }
 
+.menu {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.menu, .dropdown-content {
+  border-radius: 13px;
+}
+
 iframe {
-  height: 96vh;
+  height: 93.9vh;
   width: 100vw;
   background-color: #fff;
 }
