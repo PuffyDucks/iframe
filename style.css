@@ -109,12 +109,13 @@ li {
 }
 
 .menu, .dropdown-content {
-  border-radius: 13px;
+  border-radius: 15px;
 }
 
 #bookmarks {
   margin-bottom: 0vh;
 }
+
 #info {
   position: relative;
   margin-top: 30vh;

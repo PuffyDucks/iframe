@@ -9,6 +9,8 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="script.js"></script>
+  <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+	<script src="x-frame-bypass.js" type="module"></script>
 </head>
 <body onload="onload();">
   <ul>
@@ -30,7 +32,7 @@
     </li>
   </ul>
   <div align="center">
-  <iframe id="browser" name="browser" loadeddata="load();" frameBorder="0" scrolling="auto" noresize></iframe> <br/>
+  <iframe is="x-frame-bypass" id="browser" name="browser" loadeddata="load();" frameBorder="0" scrolling="auto" noresize></iframe> <br/>
   <script type="text/javascript">
   document.getElementById("browser").onload = function() {
     var browserFrame = document.getElementById("browser");
