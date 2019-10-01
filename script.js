@@ -42,7 +42,7 @@ function setBrowserFrameSourceToBookmark1(){
 
 function setBrowserFrameSourceToBookmark2(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "http://birrell.org/andrew/minesweeper/";
+  browserFrame.src = "https://secret.ethanl.ee/";
 }
 
 function setBrowserFrameSourceToBookmark3(){
@@ -52,7 +52,7 @@ function setBrowserFrameSourceToBookmark3(){
 
 function setBrowserFrameSourceToBookmark4(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "http://coreball.sinaapp.com/";
+  browserFrame.src = "http://birrell.org/andrew/minesweeper/";
 }
 
 function setBrowserFrameSourceToBookmark5(){
