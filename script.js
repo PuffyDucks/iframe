@@ -57,7 +57,7 @@ function setBrowserFrameSourceToBookmark4(){
 
 function setBrowserFrameSourceToBookmark5(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://www.nationalgeographic.com/projects/magazines/pdf/specialprojects-yourshot-puzzle/dist/jigsaw-puzzle.html#";
+  browserFrame.src = "https://webchat.freenode.net/";
 }
 
 function setBrowserFrameSourceToBookmark6(){

@@ -122,10 +122,10 @@ li {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 60px;
 }
 
-h1, h3 {
+h1#title, h3 {
   text-align: center;
 }
 
