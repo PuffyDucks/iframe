@@ -42,37 +42,37 @@ function setBrowserFrameSourceToBookmark1(){
 
 function setBrowserFrameSourceToBookmark2(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://secret.ethanl.ee/";
+  browserFrame.src = "https://narwhale.io";
 }
 
 function setBrowserFrameSourceToBookmark3(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://ytmp3.cc";
+  browserFrame.src = "https://skribbl.io/";
 }
 
 function setBrowserFrameSourceToBookmark4(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "http://birrell.org/andrew/minesweeper/";
+  browserFrame.src = "https://slither.io";
 }
 
 function setBrowserFrameSourceToBookmark5(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://webchat.freenode.net/";
+  browserFrame.src = "https://play.cprewritten.net";
 }
 
 function setBrowserFrameSourceToBookmark6(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://skribbl.io/";
+  browserFrame.src = "https://secret.ethanl.ee/";
 }
 
 function setBrowserFrameSourceToBookmark7(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://theuselessweb.site/Flight%20of%20the%20Hamsters/";
+  browserFrame.src = "http://birrell.org/andrew/minesweeper/";
 }
 
 function setBrowserFrameSourceToBookmark8(){
   var browserFrame = document.getElementById("browser");
-  browserFrame.src = "https://play.cprewritten.net";
+  browserFrame.src = "https://ytmp3.cc";
 }
 
 function setBrowserFrameSourceToBookmark9(){
