@@ -1,6 +1,6 @@
 const bookmarks = [
   "https://www.bing.com/",
-  "http://narwhale.io/",
+  "https://diep.io/",
   "https://skribbl.io/",
   "https://slither.io",
   "https://secret.ethanl.ee/",
