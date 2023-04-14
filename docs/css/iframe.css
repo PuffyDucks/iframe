@@ -42,7 +42,7 @@ a#bookmarks {
 
 @font-face {
   font-family: "Roboto";
-  src: url(Roboto-Regular.ttf) format("truetype");
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
 
 .dropdown-content {
@@ -72,7 +72,6 @@ ul {
   list-style-type: none;
   padding: 0;
   overflow: hidden;
-  align: center;
   display:table;
   margin: 0 auto;
 }
