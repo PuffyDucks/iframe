@@ -20,16 +20,13 @@
         <a onclick="setIFrameSourceToBookmark(3)">Slither.io</a>
         <a onclick="setIFrameSourceToBookmark(4)">Secret Hitler</a>
         <a onclick="setIFrameSourceToBookmark(5)">Town of Salem</a>
-        <a id="bottom" onclick="setIFrameSourceToBookmark(6)">Info</a>
+        <a id="bottom" onclick="setIFrameSourceToBookmark(6)">Home</a>
       </div>
     </li>
   </ul>
   <div>
   <iframe id="iframe" name="iframe" loadeddata="load();" frameBorder="0" scrolling="auto" noresize></iframe> <br/>
   <script type="text/javascript">
-  document.getElementById("iframe").onload = function() {
-    location.hash = document.getElementById("iframe").src;
-  }
   </script>
   </div>
 </body>
