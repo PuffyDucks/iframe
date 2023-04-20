@@ -38,11 +38,24 @@ function checkKeypress(key) {
   }
 }
 
+function validateURL(address) {
+  let url;
+  try {
+    url = new URL(address);
+  } catch (_) {
+    return false;
+  }
+  return (url.protocol === "http:" || url.protocol === "https:");
+}
+
 function setIFrameSource() {
-  if (document.getElementById("urlbox").value === "") {
+  let address = document.getElementById("urlbox").value;
+  if (address === "") {
     document.getElementById("iframe").src = "home.html";
+  } else if (!validateURL(address)) {
+    document.getElementById("iframe").src = "error.html";
   } else {
-    document.getElementById("iframe").src = document.getElementById("urlbox").value;
+    document.getElementById("iframe").src = address;
   }
 }
 
